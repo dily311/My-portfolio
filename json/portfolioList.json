@@ -93,7 +93,7 @@
         "tag" : [
             "조별작업", "PC", "프론트엔드"
         ],
-        "siteLink" : "https://kim365my.github.io/Shinhan-Investment-Corp_citeRemake/",
+        "siteLink" : "https://dily311.github.io/Shinhan-Investment-Corp_citeRemake/",
         "imgLink" : "./images/group_01_신한투자증권.png",
         "directory" : "조별활동으로 신한투자증권을 리마스터를 진행하였습니다. 저는 메인 인덱스 페이지를 맡아서 조원분과 함께 진행했는데요. 처음 배우는 과정에서 완성된 결과물이다보니 여러가지를 배웠고, 재미를 느꼈던 순간이었습니다."
     }, 
@@ -107,7 +107,7 @@
         "tag" : [
             "조별작업", "PC", "백엔드", "DB"
         ],
-        "siteLink" : "https://github.com/kim365my/Project_cambak",
+        "siteLink" : "https://github.com/dily311/Project_cambak",
         "imgLink" : "./images/캠박.png",
         "directory" : "조별활동으로 캠박이라는 사이트를 클론코딩하였습니다. 저는 백엔드 부분을 맡아서 Part API와 네이버 스마트 에디터를 활용한 이미지 서버 업로드 기능 구현과 CRUD를 구현했습니다."
     }
