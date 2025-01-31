@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>포트폴리오</title>
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="./images/favicon/favmc32.png">
+    <link rel="apple-touch-icon=precomposed" href="./images/favicon/montblanc_fav144.png">    
+    <!-- 폰트어썸 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- 해당문서 스타일 -->
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div id="wrap">
+        <main role="main">
+            <!-- About Me -->
+            <section id="about_me" class="check">
+                <div class="header">
+                    <h2>About Me</h2>
+                </div>
+                <p>
+                    저는 항상 배우는 자세로 UX 경험이 좋은 웹 사이트를 만들기 위해서 노력합니다. <br> 
+                    주로 Java와 JS를 이용해서 작업을 합니다. 
+                </p>
+                <!-- 기술 스택 -->
+                <div class="box">
+                    <h3>기술 스택</h3>
+                    <ul class="skill_list"></ul>
+                </div>
+            </section>
+
+            <!-- Portfolio -->
+            <section id="Portfolio">
+                <div class="header">
+                    <div class="snb">
+                        <h2>Project
+                            <span></span>
+                        </h2>
+                        <ul class="Portfolio_Sort">
+                            <li><button class="check">인기순</button></li>
+                            <li><button>최신순</button></li>
+                            <li><button>과거순</button></li>
+                        </ul>
+                    </div>
+                    <div class="filter tag"></div>
+                </div>
+                <ul class="Portfolio_list content"></ul>
+            </section>
+        </main>
+        <nav class="gnb">
+            <ul>
+                <li class="check">About Me</li>
+                <li>Portfolio</li>
+            </ul>
+        </nav>
+    </div>
+</body>
+<script src="./js/script.js"></script>
+<script src="./js/skill.js"></script>
+</html>

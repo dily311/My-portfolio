@@ -1,0 +1,375 @@
+@charset "utf-8";
+
+/* ------------------- */
+/* 전역설정 */
+/* ------------------- */
+html, body {
+    font-family: 'Noto sans KR',sans-serif;
+    font-size: 62.5%;
+}
+body {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23bbb3aa' fill-opacity='0.4'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0H5v5H0v1h5v94h1V6h94V5H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"), radial-gradient(73% 147%, #EADFDF 59%, #ECE2DF 100%), radial-gradient(91% 146%, rgba(255,255,255,0.50) 47%, rgba(0,0,0,0.50) 100%);
+}
+
+#wrap{
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+}
+
+.hidden {
+    display: none;
+}
+
+/* ------------------- */
+/* nav */
+/* ------------------- */
+nav {
+    position: relative;
+    width: 5.4rem;
+}
+nav ul{
+    width: 20rem;
+    white-space: nowrap;
+    display: flex;
+    overflow: hidden;
+    transform: rotate(90deg) translate(50%, 135%);
+    border-radius: 2rem 2rem 0 0;
+    /* 포지션 */
+    position: sticky;
+    right: 0;
+    top: 4rem;
+    z-index: 99999;
+    
+}
+nav li {
+    width: 100%;
+    text-align: center;
+    padding: 2rem 1.8rem;
+    font-size: 1.4rem;
+    background: #ffeec9;
+    cursor: pointer;
+    /* 포지션 */
+    position: relative;
+}
+
+nav li.check {
+    background: #fbd95c;
+}
+nav li:hover::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: #5e5e5e52;
+    /* 포지션 */
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* ------------------- */
+/* main */
+/* ------------------- */
+main {
+    width: calc(100% - 5.4rem);
+    min-height: 100vh;
+    padding: 0 4rem 3.5rem;
+    background: #fff;
+    /* 포지션 */
+    position: relative;
+    z-index: 1;
+}
+main section{
+    display: none;
+}
+main section.check{
+    display: block;
+}
+
+.header {
+    line-height: 1;
+    padding: 3.5rem 0;
+    background: #fff;
+    /* 포지션 */
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.header h2 {
+    font-size: 3rem;
+    font-weight: 800;
+}
+
+.content {
+    /* 그리드 */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(40%, 1fr));
+    gap: 1.5rem;
+}
+/* ------------------- */
+/* about_me */
+/* ------------------- */
+#about_me a:hover {
+    text-decoration: underline;
+}
+
+#about_me {
+    font-size: 1.6rem;
+    line-height: 2;
+}
+
+#about_me .box {
+    margin: 1.8rem 0;
+}
+#about_me .box h3 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+}
+
+/* ------------------- */
+/* Skill */
+/* ------------------- */
+.skill_list {
+    width: 100%;
+    font-size: 1.6rem;
+}
+.skill_list img {
+    width: auto;
+}
+/* ------------------- */
+/* Portfolio */
+/* ------------------- */
+.snb {
+    /* 플렉스 */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.snb h2 {
+    font-size: 3rem;
+    font-weight: 800;
+}
+.snb li {
+    display: inline-block;
+    font-size: 1.8rem;
+}
+.snb li button {
+    cursor: pointer;
+}
+.snb li button.check {
+    color: #f5a718;
+    font-weight: 800;
+}
+.snb button {
+    background: none;
+}
+.snb li:not(:last-child)::after {
+    content: "/";
+    margin: 0 0.8rem;
+}
+
+.filter {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+.filter.tag li:hover {
+    background: #000;
+    color: #fff;
+}
+.filter li::after{
+    content: "\58";
+    font-family: "FontAwesome";
+    margin-left: 0.8rem;
+}
+/* 리스트 */
+.Portfolio_list > li {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 2rem 1.5rem;
+    border: 1px solid #DBDBDB;
+    border-radius: 5px;
+    animation: show 0.8s;
+}
+@keyframes show {
+    0%{
+        transform: translateY(30%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+.Portfolio_list a {
+    display: block;
+    margin-bottom: 1.5rem;
+}
+
+.Portfolio_list a:hover h3 {
+    text-decoration: underline;
+}
+.Portfolio_list a:hover img {
+    transform: scale(1.2);
+}
+.Portfolio_list a:hover picture::before{
+    content: "클릭시 해당 사이트로 이동됩니다.";
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    font-size: 1.6rem;
+    background: rgba(0, 0, 0, 0.493);
+    /* 플렉스 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* 포지션 */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+.Portfolio_list h3{
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+.Portfolio_list picture {
+    display: block;
+    width: 100%;
+    height: 30vh;
+    overflow: hidden;
+    position: relative;
+}
+.Portfolio_list img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: all 1s;
+}
+
+.Portfolio_list dl {
+    display: flex;
+    font-size: 1.6rem;
+    color: #767676;
+    margin-bottom: 1.8rem;
+}
+.Portfolio_list dt{
+    font-weight: 500;
+    margin-right: 1rem;
+    color: #000;
+    white-space: nowrap;
+}
+
+.Portfolio_list hr {
+    height: 1px;
+    background-color: #DBDBDB;
+}
+.Portfolio_list p {
+    font-size: 1.6rem;
+    line-height: 1.6;
+    margin-top: 2rem;
+}
+
+.useLibery li{
+    display: inline-block;
+    margin-right: 1rem;
+}
+.useLibery li:not(:last-child)::after {
+    content: ", ";
+}
+.tag {
+    align-items: center;
+}
+.tag li {
+    display: inline-block;
+    background: #DBDBDB;
+    padding: 0.5rem 1rem;
+    margin-right: 1rem;
+    cursor: pointer;
+}
+.tag li:hover {
+    background: #ccc;
+}
+.tag li::before{
+    content: "#";
+}
+.tag li.check {
+    background: #000;
+    color: #fff;
+}
+
+
+
+
+/* ------------------------------------- */
+/* 780px 이하 기기 적용 */
+/* ------------------------------------- */
+@media screen and (max-width:780px) {
+    #wrap {
+        width: 100%;
+        height: 100%;
+        padding: 2rem 0 0;
+        align-items: flex-end;
+        flex-direction: column-reverse;
+    }
+    nav {
+        width: auto;
+    }
+    nav ul {
+        transform: rotate(0);
+    }
+    nav li {
+        padding: 1.5rem 1.8rem 1rem;
+    }
+    main {
+        width: 100%;
+        height: calc(100% - 4rem);
+        min-height: auto;
+        border-radius: 2rem 0 0;
+        padding: 0;
+    }
+    main section {
+        height: 100%;
+    }
+    .header {
+        height: 9.5rem;
+        padding: 3.5rem 1.8rem 2rem;
+    }
+    .content {
+        height: calc(100% - 9.5rem);
+        overflow-y: auto;
+        grid-template-columns: repeat(1, 1fr);
+        padding: 0rem 1.8rem 2rem;
+    }
+    .Portfolio_list dl{
+        align-items: start;
+        flex-direction: column;
+        margin-bottom: 1.2rem;
+    }
+    .Portfolio_list dt {
+        margin-bottom: 1rem;
+    }
+
+}
+
+/* ------------------------------------- */
+/* 425px 이하 기기 적용 */
+/* ------------------------------------- */
+@media screen and (max-width:425px) {
+    .snb{
+        height: 100%;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: start;
+    }
+    .header {
+        height: 12rem;
+    }
+    .content {
+        height: calc(100% - 12rem);
+    }
+}
